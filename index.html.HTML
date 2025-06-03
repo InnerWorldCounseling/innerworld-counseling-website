@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compassionate mental health counseling offering online-only appointments. Specializing in trauma, anxiety, and addiction. Schedule your session today. Contact us at (701) 404-7895.">
+    <title>Inner World Counseling Services</title>
+
+    <script type="application/ld+json">{
+        "@context": "https://schema.org/",
+        "@type": "LocalBusiness",
+        "@id": "https://www.innerworldcounselingservices.com/",
+        "name": "Inner World Counseling Services",
+        "telephone": "701.404.7895",
+        "url": "https://www.innerworldcounselingservices.com/"
+    }</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for consistent styling */
+        :root {
+            --color-primary-100: #ebf0f5;
+            --color-primary-200: #b9c9db;
+            --color-primary-300: #87a2c2;
+            --color-primary-400: #5f83ad;
+            --color-primary-500: #376499;
+            --color-primary-600: #325a8a;
+            --color-primary-700: #2c507a;
+            --color-primary-800: #27466b;
+            --color-primary-900: #1c324d;
+            --color-secondary-400: #f0c092;
+            --color-secondary-500: #ecb077;
+            --color-secondary-700: #bd8d5f;
+            --color-secondary-900: #76583c;
+            --color-primary-special-500: #44ab89;
+            --color-primary-special-700: #36896e;
+            --color-primary-special-900: #225645;
+            --color-special-button: #ffffff;
+            --color-special-button-border: #ffffff;
+            --color-button-disabled: #376499;
+            --color-background: #fffcf6;
+            --color-bodytext: #333333;
+            --small-button-border-radius: 0px;
+            --medium-button-border-radius: 6px;
+            --time-spot-button-border-radius: 0px;
+            --font-header: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --font-body: Nunito, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            /* Updated image paths to be relative */
+            --intro-background-image: url('images/InneWorldBanner.jpg'); 
+            --intro-background-brightness: 76%;
+            --website-large-button-border-radius: 0px;
+            --page-max-width: none;
+            --section-border-radius: 0px;
+        }
+
+        /* Basic HTML and Body styles */
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        body {
+            margin: 0;
+            padding-top: 100px; /* Space for fixed header */
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-bodytext);
+        }
+
+        /* Header styles */
+        #pw-header {
+            position: fixed; /* Fixed header at the top */
+            top: 0;
+            width: 100%;
+            background-color: var(--color-background);
+            z-index: 1000; /* Ensure header is above other content */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .practice-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .practice-desc {
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .practice-name {
+            font-family: var(--font-header);
+            font-size: 1.8em;
+            margin: 0;
+            color: var(--color-primary-900);
+        }
+
+        .location {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .phone-link, .button-link {
+            color: var(--color-primary-500);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .button-link {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .icon-email {
+            fill: var(--color-primary-500);
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Desktop navigation menu */
+        .desktop-menu {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 10px;
+        }
+
+        .pw-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: var(--color-primary-700);
+            font-size: 1em;
+            font-weight: 700;
+            transition: color 0.3s; /* Smooth hover effect */
+        }
+
+        .nav-list li a:hover {
+            color: var(--color-primary-500);
+        }
+
+        .nav-list li a.active {
+            color: var(--color-primary-500);
+            border-bottom: 2px solid var(--color-primary-500);
+        }
+
+        /* Mobile menu specific styles - hidden by default on desktop */
+        .mobile-menu {
+            display: none; /* Hidden on desktop */
+            width: 100%;
+            text-align: center;
+        }
+
+        .mobile-menu-btn-container {
+            margin: 10px 0;
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-btn .line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary-700);
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out; /* Smooth transition for hamburger icon */
+        }
+
+        /* Animation for hamburger icon to 'X' */
+        .mobile-menu-btn.is-active .line:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .mobile-menu-btn.is-active .line:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-btn.is-active .line:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        .mobile-menu-btn.is-active .line:nth-child(4) {
+            opacity: 0; /* Hides the fourth line for a cleaner 'X' */
+        }
+
+        .mobile-nav-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+            z-index: 999; /* Below header, above content */
+        }
+
+        .mobile-nav {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 100px; /* Below the header */
+            left: 0;
+            width: 100%;
+            background-color: var(--color-background);
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .mobile-nav.is-open, .mobile-nav-overlay.is-open {
+            display: block; /* Show when active */
+        }
+
+        .mobile-nav .nav-list {
+            flex-direction: column; /* Stack links vertically */
+            gap: 15px;
+        }
+
+        /* General section styles */
+        .pw-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Intro section styles */
+        .intro {
+            background-image: var(--intro-background-image);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: #fff; /* White text for contrast */
+            padding: 100px 20px; /* More padding for intro section */
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.24); /* Dark overlay for readability */
+            z-index: 1;
+        }
+
+        .section-inner {
+            position: relative;
+            z-index: 2; /* Ensure content is above overlay */
+        }
+
+        .section-subtitle {
+            font-family: var(--font-header);
+            font-size: 2em;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        .body {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        /* Button styles */
+        .button {
+            background-color: var(--color-primary-500);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--medium-button-border-radius);
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Ensure buttons don't have underlines if they are links */
+            display: inline-block; /* Allow padding and margin */
+        }
+
+        .button:hover {
+            background-color: var(--color-primary-600);
+        }
+
+        .large-button {
+            padding: 20px 40px;
+            font-size: 2em;
+        }
+
+        .main-content {
+            text-align: center;
+        }
+
+        /* Highlights section styles */
+        .highlights .highlights-grid { /* Renamed class for clarity */
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .highlight-icon {
+            text-align: center;
+        }
+
+        .icon-circle {
+            background-color: var(--color-primary-100);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .desc {
+            font-size: 0.9em;
+            font-weight: 700;
+        }
+
+        /* About section styles */
+        .about .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        .profile-title {
+            font-size: 1em;
+            color: var(--color-primary-700);
+        }
+
+        .about .subtitle {
+            text-align: center;
+        }
+
+        /* Specialties section styles */
+        .specialties {
+            background-color: var(--color-primary-100);
+        }
+
+        .specialties h2 {
+            text-align: center;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            list-style-type: none;
+            padding: 0; /* Remove default list padding */
+        }
+
+        .tag {
+            background-color: var(--color-primary-500);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .subtitle {
+            font-family: var(--font-header);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list li {
+            margin-bottom: 5px;
+        }
+
+        .contact-cta-btns {
+            text-align: center;
+        }
+
+        /* Footer styles */
+        .site-footer {
+            background-color: var(--color-primary-900);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer .column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .footer .contact {
+            margin-bottom: 10px;
+        }
+
+        .footer .phone a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer .contact-btn {
+            color: #fff;
+            background: none;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer .pipe {
+            margin: 0 10px;
+        }
+
+        .footer .legal-block a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .disclaimer {
+            font-size: 0.8em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none; /* Hide desktop menu on small screens */
+            }
+
+            .mobile-menu {
+                display: block; /* Show mobile menu controls */
+                width: 100%;
+                text-align: center;
+            }
+
+            .mobile-menu-btn-container {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            .mobile-menu-btn .line {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: var(--color-primary-700);
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out; /* Smooth transition for hamburger icon */
+            }
+
+            /* Animation for hamburger icon to 'X' */
+            .mobile-menu-btn.is-active .line:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .mobile-menu-btn.is-active .line:nth-child(2) {
+                opacity: 0;
+            }
+            .mobile-menu-btn.is-active .line:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .mobile-menu-btn.is-active .line:nth-child(4) {
+                opacity: 0; /* Hides the fourth line for a cleaner 'X' */
+            }
+
+            .practice-details {
+                flex-direction: column; /* Stack practice details vertically */
+                text-align: center;
+            }
+
+            .location {
+                flex-direction: column; /* Stack phone and contact vertically */
+                gap: 10px;
+            }
+
+            .row {
+                flex-direction: column; /* Stack columns vertically in rows */
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="pw-page-wrapper" data-anchor-name="home">
+        <div class="banners-container">
+            <div class="content"></div>
+        </div>
+
+        <div class="pw-inner">
+            <header id="pw-header" class="top-nav has-logo">
+                <div class="practice-details">
+                    <div class="logo">
+                        <img class="logo-img" src="images/InnerWorldImage.jpg" alt="Inner World Counseling Services Logo">
+                    </div>
+                    <div class="practice-desc">
+                        <h1 class="practice-name">Inner World Counseling Services</h1>
+                        <div class="location">
+                            <div class="phone">
+                                <a aria-label="Call practice at 7014047895" class="phone-link" href="tel:7014047895">
+                                    701.404.7895
+                                </a>
+                            </div>
+                            <div class="contact">
+                                <a href="mailto:deirdre@innerworldcounselingservices.com" class="button-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" class="icon-email"><path fill-rule="evenodd" d="M2.333.333h13.334c.916 0 1.666.75 1.666 1.667v10c0 .917-.75 1.667-1.666 1.667H2.333c-.916 0-1.666-.75-1.666-1.667V2c0-.917.75-1.667 1.666-1.667zm7.55 6.95l5.45-3.408a.708.708 0 10-.75-1.2L9 6.167 3.417 2.675a.708.708 0 10-.75 1.2l5.45 3.408a1.65 1.65 0 001.766 0z" clip-rule="evenodd"/></svg>
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-menu">
+                    <div class="mobile-menu-btn-container">
+                        <button aria-expanded="false" class="mobile-menu-btn" aria-haspopup="true" aria-controls="mobile-nav" type="button">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="visually-hidden">Open Menu</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="desktop-menu">
+                    <div class="pw-nav nav">
+                        <ul class="nav-list">
+                            <li><a class="jump-link active" href="#home">Home</a></li>
+                            <li><a class="jump-link" href="#about-section">About</a></li>
+                            <li><a class="jump-link" href="#services-section">Services</a></li>
+                            <li><a class="jump-link" href="mailto:deirdre@innerworldcounselingservices.com">Contact</a></li>
+                            <li><a class="jump-link" href="#appointment-section">Request Appointment</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+            <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation">
+                <ul class="nav-list">
+                    <li><a class="jump-link" href="#home">Home</a></li>
+                    <li><a class="jump-link" href="#about-section">About</a></li>
+                    <li><a class="jump-link" href="#services-section">Services</a></li>
+                    <li><a class="jump-link" href="mailto:deirdre@innerworldcounselingservices.com">Contact</a></li>
+                    <li><a class="jump-link" href="#appointment-section">Request Appointment</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <section class="pw-section intro bg-color-secondary bg-intro-image" id="home">
+                    <div class="section-inner">
+                        <div class="bg-image">
+                            <div class="content">
+                                <h2 class="section-subtitle light">Begin Your Journey to Wellness</h2>
+                                <div class="body">
+                                    Inner World Counseling Services provides a compassionate and supportive environment to help you navigate life's challenges and achieve mental well-being. Specializing in trauma, anxiety, and addiction, I offer online-only therapy to adults seeking individual one-on-one support.
+                                </div>
+                                <div class="main-content">
+                                    <button class="button request-appt-btn" type="button">
+                                        <span class="request-label">Request Appointment</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pw-section highlights short bg-white" id="highlights-section">
+                    <div class="section-inner">
+                        <div class="highlights-grid"> 
+                            <div class="item">
+                                <div class="highlight-icon">
+                                    <div class="icon-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" class="icon icon-telehealth"><path fill-rule="evenodd" d="M38.7 39.87v-2.04l1.65-1.2C45.34 33 48 27.86 48 22.58 48 12.85 38.68 4 26 4S4 12.85 4 22.58c0 9.73 9.32 18.57 22 18.57.67 0 1.4-.03 2.22-.1l1.12-.1 1 .5 8.36 4.12v-5.7zm4 12.13l-4-1.97-10.13-5c-.93.08-1.77.12-2.57.12-14.34 0-26-10.12-26-22.57C0 10.13 11.66 0 26 0s26 10.13 26 22.58c0 6.69-3.38 12.98-9.3 17.29V52zM19 18c0-1.1.9-2 2-2h15a2 2 0 012 2v10a2 2 0 01-2 2H21a2 2 0 01-2-2v-1l-4.55 2.28a1 1 0 01-1.45-.9V17.62a1 1 0 011.45-.9L19 19v-1z" clip-rule="evenodd"/></svg>
+                                    </div>
+                                    <div class="desc">Offers Telehealth <div>Appointments</div></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="highlight-icon">
+                                    <div class="icon-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="42" viewBox="0 0 52 42" class="icon icon-card"><path d="M46.8 0H5.2A5.2 5.2 0 000 5.2v31.2c0 2.9 2.3 5.2 5.2 5.2h41.6c2.9 0 5.2-2.3 5.2-5.2V5.2C52 2.3 49.7 0 46.8 0zm0 36.4H5.2V20.8h41.6v15.6zm0-26H5.2V5.2h41.6v5.2z"/></svg>
+                                    </div>
+                                    <div class="desc">Accepts <div>Online Payments</div></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="highlight-icon">
+                                    <div class="icon-circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="41" viewBox="0 0 46 41" class="icon icon-client-check"><path fill-rule="evenodd" d="M20.3 20.41a9.83 9.83 0 100-19.66 9.83 9.83 0 000 19.66zm2.46 19.67l-2.12-2.12a7.37 7.37 0 01.05-10.47l2.07-2.01c-.96-.10-1.68-.15-2.46-.15-6.57 0-19.67 3.3-19.67 9.83v4.92h22.13zm6.03-1.19c.96.96 2.53.96 3.49 0l12.64-12.73c.93-.93.93-2.46 0-3.42l-.03-.02a2.45 2.45 0 00-3.46 0l-10.9 10.96-3.36-3.36a2.42 2.42 0 00-3.44 0l-.03.02a2.43 2.43 0 000 3.42l5.09 5.13z" clip-rule="evenodd"/></svg>
+                                    </div>
+                                    <div class="desc">Accepting New <div>Clients</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pw-section about bg-white" id="about-section">
+                    <div class="section-inner">
+                        <div class="content">
+                            <h2>About</h2>
+                            <h3 class="section-subtitle">Support for Your Mental Health Journey</h3>
+                            <div class="body">
+                                Hello! I’m a trauma therapist who creates a safe, supportive, and nonjudgmental space where your story can unfold at your pace. I believe healing begins when we feel truly seen and heard. My approach is person-centered, meaning our work is guided by your goals and what feels meaningful to you. I also support clients navigating anxiety and substance use—challenges that often stem from deeper pain. Whether you're facing chronic worry or using substances to cope, I’ll help you build insight, manage stress, and reconnect with your sense of peace.<br><br>
+                                I draw from a variety of evidence-based approaches—always tailored to fit you. Whether you're coping with the impact of childhood trauma, navigating the aftermath of a difficult life experience, or feeling stuck in patterns that no longer serve you, I’ll help you explore the underlying roots of your struggles—not just manage symptoms.<br><br>
+                                Starting therapy takes courage. I’m here to meet you where you are—and to walk with you every step of the way. It’s a true honor to witness your story and be a part of your healing journey.
+                            </div>
+                            <div class="profile">
+                                <img class="profile-img" src="https://photos.psychologytoday.com/c62e5347-615b-4206-b20e-37b211420ef5/1/320x400.jpeg" alt="Deirdre Kuvaas, MS, LPCC, LADC headshot">
+                                <div class="profile-name">Deirdre Kuvaas, MS, LPCC, LADC</div>
+                                <div class="profile-title">Trauma Therapist</div>
+                            </div>
+                            <div class="body">
+                                <h4 class="subtitle">Qualifications and Experience</h4>
+                                I have over 10 years of field experience working with clients struggling with mental health disorders and substance use disorders. I started my career as a drug and alcohol counselor and later pursued my journey to become a mental health counselor, earning my Masters of Science in Counseling from the University of Mary in 2017. I’ve been in practice for 8 years and hold licenses in Minnesota (LPCC #3568), North Dakota (LPCC #1330-10-15-23-548), and Ohio (LPCC #E.2404393). I am a very person-centered therapist, focusing on the root causes of mental health challenges and using methods that best fit each client, whether that’s challenging thoughts, focusing on emotions, or utilizing EMDR.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pw-section specialties bg-color-primary" id="services-section">
+                    <div class="section-inner">
+                        <div class="content">
+                            <h2 class="white">Services</h2>
+                            <h3 class="section-subtitle light">Services and Fees</h3>
+                            <ul class="tag-list">
+                                <li class="tag">Trauma and PTSD</li>
+                                <li class="tag">Anxiety</li>
+                                <li class="tag">Addiction</li>
+                                <li class="tag">Coping Skills</li>
+                                <li class="tag">Depression</li>
+                                <li class="tag">Family Conflict</li>
+                                <li class="tag">Life Transitions</li>
+                                <li class="tag">Peer Relationships</li>
+                                <li class="tag">Self Esteem</li>
+                                <li class="tag">Sexual Abuse</li>
+                                <li class="tag">Substance Use</li>
+                                <li class="tag">Women's Issues</li>
+                            </ul>
+                            <div class="row">
+                                <div class="column">
+                                    <h4 class="subtitle">Approaches</h4>
+                                    <ul class="list">
+                                        <li>Cognitive Behavioral (CBT)</li>
+                                        <li>Cognitive Processing (CPT)</li>
+                                        <li>EMDR</li>
+                                        <li>Emotionally Focused</li>
+                                        <li>Humanistic</li>
+                                        <li>Motivational Interviewing</li>
+                                        <li>Solution Focused Brief (SFBT)</li>
+                                        <li>Trauma Focused</li>
+                                        <li>Trauma Informed Care</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <h4 class="subtitle">Insurance Accepted</h4>
+                                    <ul class="list">
+                                        <li>Aetna</li>
+                                        <li>BlueCross and BlueShield</li>
+                                        <li>Cigna and Evernorth</li>
+                                        <li>EAP: Cigna</li>
+                                        <li>EAP: UnitedHealthcare/Optum</li>
+                                        <li>United Health/Optum</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <h4 class="subtitle">Fees</h4>
+                                    <ul class="list">
+                                        <li>Individual Session: $125</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pw-section bg-white" id="locations-section">
+                    <div class="section-inner">
+                        <div class="content">
+                            <h2>Locations</h2>
+                            <div class="body">
+                                Inner World Counseling Services offers online-only therapy sessions, serving clients in Minnesota, North Dakota, Utah, and Ohio, where I am licensed to practice.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="pw-section bg-white" id="appointment-section">
+                    <div class="section-inner">
+                        <div class="contact-cta-btns">
+                            <div class="main-content no-top-spacing">
+                                <button class="button request-appt-btn" type="button">
+                                    <span class="request-label">Request Appointment</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <div class="inner">
+                    <div class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="column">
+                                    <div>
+                                        <div class="subtitle practice-name">Inner World Counseling Services</div>
+                                        <div class="contact">
+                                            <span class="phone">
+                                                <a href="tel:7014047895">701.404.7895</a>
+                                            </span>
+                                            <span class="pipe"> | </span>
+                                            <a href="mailto:deirdre@innerworldcounselingservices.com" class="contact-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" class="icon-email"><path fill-rule="evenodd" d="M2.333.333h13.334c.916 0 1.666.75 1.666 1.667v10c0 .917-.75 1.667-1.666 1.667H2.333c-.916 0-1.666-.75-1.666-1.667V2c0-.917.75-1.667 1.666-1.667zm7.55 6.95l5.45-3.408a.708.708 0 10-.75-1.2L9 6.167 3.417 2.675a.708.708 0 10-.75 1.2l5.45 3.408a1.65 1.65 0 001.766 0z" clip-rule="evenodd"/></svg>Contact
+                                            </a>
+                                        </div>
+                                        <div class="legal-block">
+                                            <div class="npp">
+                                                <a href="#" target="_blank" rel="noopener noreferrer">Notice of Privacy Practices</a>
+                                            </div>
+                                        </div>
+                                        <div class="social-media">
+                                            <a href="https://www.facebook.com/yourprofile" class="social-icon" aria-label="Link to Facebook profile" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook icon"></a>
+                                            <a href="https://www.instagram.com/yourprofile" class="social-icon" aria-label="Link to Instagram profile" target="_blank" rel="noopener noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon"></a>
+                                            <a href="https://twitter.com/yourprofile" class="social-icon" aria-label="Link to X (formerly Twitter) profile" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/24/FFFFFF/x.png" alt="X (formerly Twitter) icon"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="disclaimer">
+                                THIS WEBSITE IS NOT TO BE USED FOR EMERGENCY SITUATIONS. IF YOU OR OTHERS ARE IN IMMEDIATE DANGER OR EXPERIENCING A MEDICAL EMERGENCY, CALL 911 IMMEDIATELY.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for "Request Appointment" button redirection
+        document.addEventListener('DOMContentLoaded', function() {
+            const appointmentButtons = document.querySelectorAll('.request-appt-btn');
+            const appointmentURL = 'https://care.headway.co/providers/deirdre-kuvaas?utm_source=pem&utm_medium=direct_link&utm_campaign=135781';
+
+            appointmentButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    window.open(appointmentURL, '_blank'); // Open in a new tab
+                });
+            });
+
+            // JavaScript for Mobile Menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+            const jumpLinks = document.querySelectorAll('.jump-link'); // Select all jump links
+
+            function toggleMobileMenu() {
+                mobileMenuBtn.classList.toggle('is-active');
+                mobileNav.classList.toggle('is-open');
+                mobileNavOverlay.classList.toggle('is-open');
+                mobileMenuBtn.setAttribute('aria-expanded', mobileNav.classList.contains('is-open'));
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            mobileNavOverlay.addEventListener('click', toggleMobileMenu); // Close when clicking overlay
+
+            // Close mobile menu when a navigation link is clicked
+            jumpLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Only close if it's a mobile menu link and the menu is open
+                    if (mobileNav.classList.contains('is-open') && mobileNav.contains(link)) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
